@@ -3,10 +3,10 @@ Under bed load cell Z-probe
 
 ## What’s needed:
 
-- STM32F103C8T6 board. I’m using a “black pill” [wiki.stm32duino.com](http://wiki.stm32duino.com/index.php?title=Black_Pill). Any Arduino compatible board could be used, but those * pills board are really cheap. The STM32 is 3.3V matched the Duet board I'm using.
+- STM32F103C8T6 board. I’m using a “[black pill](http://wiki.stm32duino.com/index.php?title=Black_Pill)”. Any Arduino compatible board could be used, but those * pills board are really cheap. The STM32 is 3.3V matched the Duet board I'm using.
 - STLink v2 or USB to TTL (3.3v) adapter to program the board.
 - Arduino IDE + STM32duino
-- HX711-multi library [github.com](https://github.com/compugician/HX711-multi)
+- [HX711-multi library](https://github.com/compugician/HX711-multi)
     - Edit HX711-multi.h by removing "HX711MULTI::" from line 49. (It won't compile if you don't remove it)
 - 3 load cells. I’m using 5 Kgs load cell.
 - 3 HX711 breakout board, [set sampling rate to 80 samples per second](http://www.instructables.com/id/Reprap-Load-Cell-Z-Probe/).
@@ -25,7 +25,6 @@ Under bed load cell Z-probe
 3. Connect GND and VCC pin of the HX711 boards to GND and +3V of the STM32 board.
 4. Connect all SCK (Clock) pin of the HX711 boads to pin PA7 of the STM32 board.
 5. Connect each DT (Data) pin of the HX711 boards to pin PA0, PA1 and PA2.
-5. 
 6. Apply power to the STM32 board.
     1. The blue LED on the STM32 should light up for 10 seconds, indicating the noise learning phase. (It read 80 x 10 samples from every HX711).
     2. When the blue LED is off, indicate the untrigger state.
@@ -46,4 +45,4 @@ Connecting the PA10 pin of STM32 board to GND (or send logic low from your 3D pr
 
 ## Links
 
-[reprap forum](http://forums.reprap.org/read.php?178,784481)
+- [A thread in RepRap forum](http://forums.reprap.org/read.php?178,784481)
