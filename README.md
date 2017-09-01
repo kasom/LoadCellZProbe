@@ -1,5 +1,5 @@
 # LoadCellZProbe
-Under bed load cell Z-probe
+Under bed load cell Z-probe. It’s somewhat a mixture of [JohnSL's](https://github.com/JohnSL/FSR_Endstop) and [palmer23's](http://forums.reprap.org/read.php?14,605317,737910).
 
 ## What’s needed:
 
